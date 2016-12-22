@@ -1,0 +1,19 @@
+{
+  "name": "EffectsAnimate",
+  "version": "0.0.0",
+  "authors": [
+    "donglegend <309093631@qq.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.3.7"
+  }
+}

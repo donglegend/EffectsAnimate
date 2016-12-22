@@ -1,0 +1,35 @@
+{
+  "name": "effectanimate",
+  "version": "1.0.0",
+  "description": " 特效动画",
+  "main": "app.js",
+  "scripts": {
+    "test": "build",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/donglegend"
+  },
+  "keywords": [
+    "特效动画展示"
+  ],
+  "author": "dongsheng",
+  "license": "ISC",
+  "devDependencies": {
+    "child-exec": "^1.0.0",
+    "del": "^2.2.2",
+    "express": "^4.14.0",
+    "fs": "^0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "~0.5.1",
+    "gulp-header": "^1.8.7",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-uglify": "~2.0.0",
+    "ip": "^1.1.4",
+    "livereload": "^0.6.0",
+    "opn": "^4.0.2",
+    "ora": "^0.4.0",
+    "safe-write-file": "^1.1.2"
+  }
+}
