@@ -6,7 +6,10 @@ module.exports = [{
 	"text": "九宫格跑马灯抽奖"
 }, {
 	"path": "http://donglegend.com/effects/myParticle/snow.html",
-	"text": "粒子图片1粒子图片2"
+	"text": "粒子图片1"
+}, {
+	"path": "http://donglegend.com/effects/myParticle/hankuke.html",
+	"text": "粒子图片2"
 }, {
 	"path": "http://donglegend.com/effects/RingBar/index.html",
 	"text": "canvas 圆环进度条"
@@ -42,7 +45,10 @@ module.exports = [{
 	"text": "类似百度图片的那种图片信息显示效果"
 }, {
 	"path": "http://donglegend.com/mySwiper/dist/demo/v.html",
-	"text": "垂直方向水平方向"
+	"text": "垂直方向"
+}, {
+	"path": "http://donglegend.com/mySwiper/dist/demo/h.html",
+	"text": "水平方向"
 }, {
 	"path": "http://donglegend.com/effects/3dphotos/index.html",
 	"text": "3d旋转图册"
