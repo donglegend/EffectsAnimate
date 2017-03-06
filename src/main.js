@@ -9,7 +9,6 @@ $(function() {
 	var elLoading = $("#loading");
 	var elMask = $("#mask");
 
-
 	setMenuList();
 	bindMenuEvent();
 

@@ -1,7 +1,69 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+$(function() {
+
+	var Router = require("./router");
+
+	var elMenuList = $("#menuList");
+	var elContents = $("#contents");
+	var elContentPage = $("#ContentPage");
+
+	var elLoading = $("#loading");
+	var elMask = $("#mask");
+
+
+	setMenuList();
+	bindMenuEvent();
+
+	elMenuList.find('a.list-group-item').eq(0).trigger("click");
+
+	function setMenuList() {
+		var html = "";
+		$.each(Router, function(index, item) {
+			html += '<a href="javascript:;" class="list-group-item" data-href="' + item.path + '">' + item.text + '</a>';
+		})
+
+		elMenuList.append(html)
+	}
+
+
+	function bindMenuEvent() {
+
+		elMenuList.on("click", "a.list-group-item", function() {
+			var self = $(this);
+			var path = self.data("href");
+			self.addClass('active').siblings().removeClass('active');
+			elContentPage.attr("src", path);
+
+			elMask.show();
+			elLoading.show();
+
+			elContentPage.on("load", function (){
+				elMask.hide();
+				elLoading.hide();
+			})
+		})
+
+		$(window).scroll(function() {
+			if ($(window).scrollTop() > 150) {
+				elContents.css({
+					top: "15px"
+				})
+			} else {
+				elContents.css({
+					top: "150px"
+				})
+			}
+		});
+
+
+
+	}
+
+
+
+})
+},{"./router":2}],2:[function(require,module,exports){
 module.exports = [{
-	"path": "http://donglegend.com/effects/reactMateUiStudy/dist/index.html",
-	"text": "Material-UI 学习笔记"
-}, {
 	"path": "http://donglegend.com/effects/canvas_paomadeng/index.html",
 	"text": "canvas九宫格跑马灯抽奖"
 }, {
@@ -83,3 +145,4 @@ module.exports = [{
 	"path": "https://daneden.github.io/animate.css/",
 	"text": "animate.css 效果预览"
 }]
+},{}]},{},[1])
