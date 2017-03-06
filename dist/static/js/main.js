@@ -10,7 +10,6 @@ $(function() {
 	var elLoading = $("#loading");
 	var elMask = $("#mask");
 
-
 	setMenuList();
 	bindMenuEvent();
 
@@ -64,6 +63,9 @@ $(function() {
 })
 },{"./router":2}],2:[function(require,module,exports){
 module.exports = [{
+	"path": "http://donglegend.com/effects/reactMateUiStudy/dist/index.html",
+	"text": "Material-UI 学习笔记"
+}, {
 	"path": "http://donglegend.com/effects/canvas_paomadeng/index.html",
 	"text": "canvas九宫格跑马灯抽奖"
 }, {

@@ -43,9 +43,9 @@ var server = app.listen(port, function() {
 
 
 
-opn(url);
+opn(url+"/src/index.html");
 
 
 exec("gulp watch");
 
-// exec("gulp watch");
+exec("gulp watch");
