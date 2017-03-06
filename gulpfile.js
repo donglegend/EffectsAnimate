@@ -87,14 +87,16 @@ gulp.task("build",['browserify','uglify'], function (){
 		output = output.replace(/src=\"\/src\/build\//g, function(word) {
 			return word.replace('src="\/src/build/', 'src="./static/js/min/');
 		});*/
-		output = output.replace(/src=\"\/src(.*)\.js\"/g, function(word) {
-			return word.replace('\.js', '.js' + '?' + new Date().getTime().toString(16));
-		});
 
-		// output = output.replace(/src=\"\/src(.*)/g, function(word) {
-		// 	return word.replace('src="\/src/build/', 'src="./static/js/min/');
+		output = output.replace(/src="\.\/static\/(js)\/[A-Z0-9a-z_]+\.js\"/g, function (word){
+			// console.log(word.replace(/\.js/, '.js' + '?' + new Date().getTime().toString(16)))
+			return word.replace(/\js\//, "\js\/min\/").replace(/\.js/, '.js' + '?' + new Date().getTime().toString(16));
+		})
+
+		// output = output.replace(/src=\"\/src\/static\/js\/[A-Z0-9a-z-_\/]+\.js\"/g, function(word) {
+		// 	return word.replace(/\/src\/static\js\//, "\/src\/static\js\/min\/").replace('\.js', '.js' + '?' + new Date().getTime().toString(16));
 		// });
-
+		
 
 		safeWriteFile(paths.dist + "/" + i, output);
 	})
