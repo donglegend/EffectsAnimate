@@ -29,7 +29,9 @@
     "ip": "^1.1.4",
     "livereload": "^0.6.0",
     "opn": "^4.0.2",
-    "ora": "^0.4.0",
-    "safe-write-file": "^1.1.2"
+    "ora": "^0.4.0"
+  },
+  "dependencies": {
+    "safe-file-write": "^2.0.0"
   }
 }
