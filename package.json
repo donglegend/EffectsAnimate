@@ -21,7 +21,7 @@
     "del": "^2.2.2",
     "express": "^4.14.0",
     "fs": "^0.0.1-security",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-browserify": "~0.5.1",
     "gulp-header": "^1.8.7",
     "gulp-load-plugins": "^1.4.0",
